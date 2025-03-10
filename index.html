@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Cart & Wishlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .add-to-bag { background-color: #ff3f6c; color: white; }
+        .wishlist { background-color: #555; color: white; }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <h3>Stylish T-Shirt (1+1 Offer)</h3>
+        <p>Price: ₹999</p>
+        <button class="btn add-to-bag" onclick="addToBag()">Add to Bag</button>
+        <button class="btn wishlist" onclick="moveToWishlist()">Move to Wishlist</button>
+    </div>
+    
+    <h3>Bag Items:</h3>
+    <ul id="bag-list"></ul>
+
+    <h3>Wishlist Items:</h3>
+    <ul id="wishlist"></ul>
+
+    <script>
+        function addToBag() {
+            let bag = document.getElementById("bag-list");
+            let item = document.createElement("li");
+            item.textContent = "Stylish T-Shirt (1+1 Offer)";
+            bag.appendChild(item);
+            alert("Item added to Bag!");
+        }
+        
+        function moveToWishlist() {
+            let wishlist = document.getElementById("wishlist");
+            let item = document.createElement("li");
+            item.textContent = "Stylish T-Shirt (1+1 Offer)";
+            wishlist.appendChild(item);
+            alert("Item moved to Wishlist!");
+        }
+    </script>
+</body>
+</html>
